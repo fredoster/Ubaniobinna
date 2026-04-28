@@ -163,14 +163,24 @@ body {
 }
 
 /* ====================== CONSISTENT LOGO ALIGNMENT ====================== */
+/* Force both logos to start from the exact same left position */
+
 .nav-logo,
 .footer-logo {
     margin-left: 0 !important;
     padding-left: 0 !important;
 }
 
-/* Ensure both logos start from the same left position */
+/* Make nav and footer have the same left padding */
 .nav-container,
-.footer .max-w-screen-2xl > div:first-child {
-    padding-left: 1.5rem;
+footer .max-w-screen-2xl > div:first-child {
+    padding-left: 24px;           /* Same as Tailwind px-6 */
+}
+
+/* Extra safety for mobile */
+@media (max-width: 640px) {
+    .nav-container,
+    footer .max-w-screen-2xl > div:first-child {
+        padding-left: 24px;
+    }
 }
