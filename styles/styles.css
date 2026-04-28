@@ -161,3 +161,16 @@ body {
         height: 55px;
     }
 }
+
+/* ====================== CONSISTENT LOGO ALIGNMENT ====================== */
+.nav-logo,
+.footer-logo {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Ensure both logos start from the same left position */
+.nav-container,
+.footer .max-w-screen-2xl > div:first-child {
+    padding-left: 1.5rem;
+}
